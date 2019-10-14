@@ -1,9 +1,10 @@
 'use strict';
 
 jQuery(function(){
-    var calendarEl = document.getElementById('calendar');
+    
+    const calendarEl = document.getElementById('calendar');
 
-    var calendar = new FullCalendar.Calendar(calendarEl, {
+    const calendar = new FullCalendar.Calendar(calendarEl, {
         plugins: [ 'dayGrid','timeGrid' ],
         header: { center: 'dayGridMonth,timeGridWeek,timeGridDay' }, // buttons for switching between views
         defaultView: 'timeGridWeek',
@@ -19,16 +20,18 @@ jQuery(function(){
                 url: "api/v1/reservations/",
                 dataType: "json",                
             }).done(function(res, textStatus, jqXHR){
-                var events = [];
-                var obj = res;
+                const events = [];
+                const obj = res;
                 $(obj.data).each(function(){
-                    var dt = new Date(this.date);
-                    var end = dt.setHours(dt.getHours() + 2); //TODO: added 2 hour is random              
+                    const dt = new Date(this.date);
+                    const end = dt.setHours(dt.getHours() + 2); //TODO: added 2 hour is random
+                    const color = getColor(this.status_id);           
                     events.push({
                         title: this.name,
                         start: this.date,
                         end: end,
                         id: this.id,
+                        color: color,
                         extendedProps: {
                             //TODO: add other attributes
                             email: this.email,
@@ -56,4 +59,25 @@ jQuery(function(){
     //calendar.setOption('locale', 'ja');
 
     calendar.render();
+
+    
+    const STATUSES = {received: 1, approved: 2, closed: 3, cancelled: 4};
+    const getColor = (status_id) => {
+        let color = null;
+        switch (status_id) {
+            case STATUSES['received']:
+                color = '#3498db';
+                break;
+            case STATUSES['approved']:
+                color = '#27ae60';
+                break;
+            case STATUSES['closed']:
+                color = '#8e44ad';
+                break;
+            case STATUSES['cancelled']:
+                color = '#bdc3c7';
+                break;
+        }
+        return color;
+      }
 });
