@@ -4,5 +4,5 @@ Route::post('fatoni/generate/api', array('as' => 'fatoni.generate.api', 'uses' =
 Route::post('fatoni/update/api/{id}', array('as' => 'fatoni.update.api', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\ApiGeneratorController@updateApi'));
 Route::get('fatoni/delete/api/{id}', array('as' => 'fatoni.delete.api', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\ApiGeneratorController@deleteApi'));
 
-Route::resource('halo', 'AhmadFatoni\ApiGenerator\Controllers\API\haloController', ['except' => ['destroy', 'create', 'edit']]);
-Route::get('halo/{id}/delete', ['as' => 'halo.delete', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\API\haloController@destroy']);
+Route::resource('api/v1/reservations', 'AhmadFatoni\ApiGenerator\Controllers\API\reservationsController', ['except' => ['destroy', 'create', 'edit']]);
+Route::get('api/v1/reservations/{id}/delete', ['as' => 'api/v1/reservations.delete', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\API\reservationsController@destroy']);
