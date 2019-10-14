@@ -40,7 +40,8 @@
         "october/cms": "~1.0",
         "laravel/framework": "5.5.*",
         "wikimedia/composer-merge-plugin": "dev-master",
-        "rainlab/builder-plugin": "^1.0"
+        "rainlab/builder-plugin": "^1.0",
+        "vojtasvoboda/oc-reservations-plugin": "^1.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.7",

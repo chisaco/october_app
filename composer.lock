@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c754e76dcdec2ac6cb5ceea08d398c52",
+    "content-hash": "da2581177d57005f55d6c139ebe45e2b",
     "packages": [
         {
             "name": "composer/installers",
@@ -3736,6 +3736,48 @@
                 "environment"
             ],
             "time": "2019-01-29T11:11:52+00:00"
+        },
+        {
+            "name": "vojtasvoboda/oc-reservations-plugin",
+            "version": "1.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vojtasvoboda/oc-reservations-plugin.git",
+                "reference": "93a07dab59491585c3d9d036caa445e989bebba7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vojtasvoboda/oc-reservations-plugin/zipball/93a07dab59491585c3d9d036caa445e989bebba7",
+                "reference": "93a07dab59491585c3d9d036caa445e989bebba7",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4"
+            },
+            "type": "october-plugin",
+            "extra": {
+                "installer-name": "reservations"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vojta Svoboda",
+                    "email": "vojtasvoboda.cz@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Reservations plugin for OctoberCMS",
+            "homepage": "https://github.com/vojtasvoboda/oc-reservations-plugin",
+            "keywords": [
+                "october",
+                "plugin",
+                "reservations"
+            ],
+            "time": "2019-09-19T19:27:42+00:00"
         },
         {
             "name": "wikimedia/composer-merge-plugin",
