@@ -1,3 +1,4 @@
+==
 <!-- Nav -->
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation">
     <div class="container">
@@ -14,6 +15,7 @@
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
                 <li class="{% if this.page.id == 'new_reservation' %}active{% endif %}"><a href="{{ 'new_reservation'|page }}">Reservation Form</a></li>
+                <li class="{% if this.page.id == 'calendar' %}active{% endif %}"><a href="{{ 'calendar'|page }}">Calendar</a></li>
             </ul>
         </div>
     </div>

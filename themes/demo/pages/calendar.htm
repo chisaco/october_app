@@ -1,0 +1,47 @@
+title = "calendar"
+url = "/calendar"
+layout = "default"
+is_hidden = 0
+==
+{% put head %}
+    <link href='https://unpkg.com/@fullcalendar/core@4.3.1/main.min.css' rel='stylesheet' />
+    <link href='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.css' rel='stylesheet' />
+    
+    <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet' />
+    <!-- <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet' /> -->
+    
+    <link href='themes/demo/assets/css/calendar.css' rel='stylesheet' />
+    
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    
+    <script src='https://unpkg.com/@fullcalendar/core@4.3.1/main.min.js'></script>
+    <script src='https://unpkg.com/@fullcalendar/daygrid@4.3.0/main.min.js'></script>
+    <script src='https://unpkg.com/@fullcalendar/timegrid@4.3.0/main.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/locales/ja.js'></script> 
+    <!-- <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>  -->
+{% endput %}        
+
+<div id="calendar-container">
+    <div id="calendar"></div>
+    
+    <div id="calendarModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+              <h4 class="modal-title" id="modalTitle">タイトル</h4>
+            </div>
+            <div class="modal-body">
+              <p id="modalBody"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<script src="themes/demo/assets/javascript/calendar.js"></script>
